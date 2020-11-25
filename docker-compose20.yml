@@ -1,0 +1,198 @@
+version: '2'
+services:
+  node1:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+    - "3001:3001"
+  node2:
+    environment:
+      - PEERS=ws://node1:6001
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+    - "3002:3001"
+    links:
+      - node1:node1
+  node3:
+    environment:
+      - PEERS=ws://node2:6001
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+    - "3003:3001"
+    links:
+      - node2:node2
+  node4:
+    environment:
+      - PEERS=ws://node3:6001
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+    - "3004:3001"
+    links:
+      - node3:node3
+  node5:
+    environment:
+      - PEERS=ws://node4:6001
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+    - "3005:3001"
+    links:
+      - node4:node4
+  node6:
+    environment:
+      - PEERS=ws://node5:6001
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+    - "3006:3001"
+    links:
+      - node5:node5
+  node7:
+    environment:
+      - PEERS=ws://node6:6001
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+    - "3007:3001"
+    links:
+      - node6:node6
+  node8:
+    environment:
+      - PEERS=ws://node7:6001
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+    - "3008:3001"
+    links:
+      - node7:node7
+  node9:
+    environment:
+      - PEERS=ws://node8:6001
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+    - "3009:3001"
+    links:
+      - node8:node8
+  node10:
+    environment:
+      - PEERS=ws://node9:6001
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+    - "3010:3001"
+    links:
+      - node9:node9
+  node11:
+    environment:
+      - PEERS=ws://node10:6001
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+    - "3011:3001"
+    links:
+      - node10:node10
+  node12:
+    environment:
+      - PEERS=ws://node11:6001
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+    - "3012:3001"
+    links:
+      - node11:node11
+  node13:
+    environment:
+      - PEERS=ws://node12:6001
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+    - "3013:3001"
+    links:
+      - node12:node12
+  node14:
+    environment:
+      - PEERS=ws://node13:6001
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+    - "3014:3001"
+    links:
+      - node13:node13
+  node15:
+    environment:
+      - PEERS=ws://node14:6001
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+    - "3015:3001"
+    links:
+      - node14:node14
+  node16:
+    environment:
+      - PEERS=ws://node15:6001
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+    - "3016:3001"
+    links:
+      - node15:node15
+  node17:
+    environment:
+      - PEERS=ws://node16:6001
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+    - "3017:3001"
+    links:
+      - node16:node16
+  node18:
+    environment:
+      - PEERS=ws://node17:6001
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+    - "3018:3001"
+    links:
+      - node17:node17
+  node19:
+    environment:
+      - PEERS=ws://node18:6001
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+    - "3019:3001"
+    links:
+      - node18:node18
+  node20:
+    environment:
+      - PEERS=ws://node19:6001
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+    - "3020:3001"
+    links:
+      - node19:node19
